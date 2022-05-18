@@ -1,0 +1,50 @@
+/* 
+===================================================================================
+MAIN STYLES 
+===================================================================================
+*/ 
+:root {
+    --main-white: rgb(230, 221, 221); 
+    --main-black: rgb(34, 33, 33);  
+}
+
+/* * {
+   
+}  */
+
+a {
+    text-decoration: none;
+}
+
+
+/* 
+====================================================================================
+NAVBAR STYLES 
+====================================================================================
+*/
+.navbar-items {
+    background-color: black; 
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-between; 
+} 
+
+.navbar-logo {
+    color: white;
+}
+
+.hamburger-menu {
+    color: var(--main-white);
+    transition: all 2s ease-out;
+}
+.navbar-items-links {
+    display: flex;
+    flex-direction: row;
+} 
+
+.nav-links {
+    color: var(--main-white); 
+    padding: 1rem; 
+} 
