@@ -6,6 +6,7 @@ MAIN STYLES
 :root {
     --main-white: rgb(230, 221, 221); 
     --main-black: rgb(34, 33, 33);  
+    --main-grey: rgb(90, 87, 87);  
 }
 
 /* * {
@@ -22,6 +23,7 @@ a {
 NAVBAR STYLES 
 ====================================================================================
 */
+
 .navbar-items {
     background-color: black; 
     height: 10vh;
@@ -33,18 +35,27 @@ NAVBAR STYLES
 
 .navbar-logo {
     color: white;
+    cursor: pointer;
 }
 
 .hamburger-menu {
     color: var(--main-white);
-    transition: all 2s ease-out;
+    transition: all 2s;  
+    display: none;
 }
+
 .navbar-items-links {
     display: flex;
     flex-direction: row;
+    list-style: none;
 } 
 
 .nav-links {
     color: var(--main-white); 
-    padding: 1rem; 
-} 
+    padding: 1rem;  
+}  
+
+.nav-links:hover {
+    background-color: var(--main-grey); 
+    border-radius: 0.5rem;
+}

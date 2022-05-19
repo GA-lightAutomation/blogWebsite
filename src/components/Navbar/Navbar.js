@@ -15,6 +15,7 @@ class Navbar extends Component {
         return(
             <nav className="navbar-items">
                <h1 className="navbar-logo">
+                  <i class="fa-solid fa-cloud-check"></i>
                    IoT
                </h1> 
 
