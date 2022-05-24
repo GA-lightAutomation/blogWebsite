@@ -1,13 +1,13 @@
 import { MenuItems } from "./MenuItems"; 
 import { Component } from "react"; 
-import './Navbar.css'; 
+import './Navbar.css';  
 // import { Button } from "./Button/Button.js"
 
-class Navbar extends Component { 
+class Navbar extends Component {  
     state = {
         clicked: false
     } 
-
+    
     handleClick = () => {
         this.setState({clicked: !this.state.clicked})
     } 
@@ -24,7 +24,7 @@ class Navbar extends Component {
                   <i className={this.state.clicked ? 'fas fa-times':'fas fa-bars'}></i>    
                </div>  
 
-               <ul className={this.state.clicked ? "navbar-items-links active" : "navbar-items-links"}> 
+               <ul className={this.state.clicked ? "navbar-items-links items-active" : "navbar-items-links"}> 
                         { MenuItems.map( (item,index) => {
                          return (
                           <li key={index}>

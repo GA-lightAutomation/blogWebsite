@@ -24,18 +24,18 @@ NAVBAR STYLES
 ====================================================================================
 */
 
-.navbar-items {
-    background-color: black; 
+.navbar-items { 
+    background-color: var(--main-black); 
     height: 10vh;
     display: flex;
     flex-direction: row;
     align-items: center; 
     justify-content: space-between; 
     width: 100vw;
-} 
+}
 
 .navbar-logo {
-    color: white;
+    color: var(--main-white);
     cursor: pointer;
 }
 
@@ -82,7 +82,7 @@ NAVBAR STYLES
       font-size: 3rem; 
    } 
 
-    .active {
+    .items-active {
       left: 0; 
       z-index: 1; 
       transition: all 0.5s ease;
@@ -94,7 +94,7 @@ NAVBAR STYLES
        position: absolute;
        top: 0;
        right: 0;
-       transform: translate(-100%, 60%);
+       transform: translate(-100%, 40%);
        font-size: 1.8rem;
        cursor: pointer;
    }
