@@ -1,9 +1,9 @@
 import React from "react"; 
-import '.../Buttons/Button.css'; 
+import '../Buttons/Button.css'; 
 
 const STYLES = [
-    'btn-outline', 
-    'btn-primary'
+    'btn-primary', 
+    'btn-hover'
 ] 
 
 const SIZES = [

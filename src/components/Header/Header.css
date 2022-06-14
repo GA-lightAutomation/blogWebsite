@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    padding: 8rem;
+} 
+
+.header-active {
+    display: none;
+}
+
+.header-intro {
+    padding: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
