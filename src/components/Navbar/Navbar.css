@@ -70,6 +70,7 @@ NAVBAR STYLES
    
    .navbar-items-links {
       position: absolute; 
+      text-align: center;
       top: 63.5px; 
       left: -100%;
       display: flex;
@@ -104,8 +105,9 @@ NAVBAR STYLES
    .navbar-items-links a {
        padding: 0;   
    } 
-   .navbar-items-links:hover {
+   .navbar-items-links a:hover {
       width: inherit;
+      background-color: rgba(37, 36, 36, 0.9); 
    }
     .navbar-logo {
         font-size: 2rem; 
