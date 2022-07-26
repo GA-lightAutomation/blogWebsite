@@ -1,8 +1,22 @@
-import React from 'react';
-import {AppBar, Box, Button, Container, Toolbar, Typography, IconButton} from "@mui/material";
+import React, {useState} from 'react';
+import {
+    AppBar,
+    Box,
+    Button,
+    Container,
+    Toolbar,
+    Typography,
+    IconButton,
+    Drawer,
+    ListItemText,
+    ListItem,
+    ListItemButton,
+    List, Divider
+} from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
-
+import {ChevronLeft} from "@mui/icons-material";
+import {styled} from '@mui/material/styles';
 
 const pages = [
     {
@@ -27,7 +41,18 @@ const pages = [
     }
 ]
 
+const DrawerHeader = styled('div')(({ theme }) => ({
+  display: 'flex',
+  alignItems: 'center',
+  background: "#062543",
+  padding: theme.spacing(0, 1),
+  // necessary for content to be below app bar
+  ...theme.mixins.toolbar,
+  justifyContent: 'flex-end',
+}));
+
 export default function Navbar(){
+    const [openDrawer, setOpenDrawer] = useState(false);
     let navigate = useNavigate();
     return (
         <AppBar position={"sticky"} sx={{
@@ -42,6 +67,7 @@ export default function Navbar(){
                           aria-controls="menu-appbar"
                           aria-haspopup="true"
                           color="inherit"
+                          onClick={() => setOpenDrawer(true)}
                         >
                           <MenuIcon />
                         </IconButton>
@@ -79,6 +105,47 @@ export default function Navbar(){
                     </Box>
                 </Toolbar>
             </Container>
+            <Drawer
+                anchor={"left"}
+                open={openDrawer}
+                onClose={() => setOpenDrawer(false)}
+            >
+                <Box
+                    role={"presentation"}
+                    sx={{width: 240}}
+                >
+                    <DrawerHeader>
+                        <IconButton
+                            onClick={() => setOpenDrawer(false)}
+                            color={"inherit"}
+                        >
+                            <ChevronLeft />
+                        </IconButton>
+                    </DrawerHeader>
+                    <List>
+                        {pages.map((page, index) => (
+                            <div key={index}>
+                                <ListItem>
+                                    <ListItemButton
+                                        sx={{
+                                            height: "100%",
+                                            width: "100%"
+                                        }}
+                                        onClick={() => {
+                                            navigate(page.path);
+                                            setOpenDrawer(false);
+                                        }}
+                                    >
+                                        <ListItemText primary={page.name} />
+                                    </ListItemButton>
+                                </ListItem>
+                                <Divider />
+                            </div>
+                        ))}
+                    </List>
+                </Box>
+            </Drawer>
         </AppBar>
-    )
+    );
 }
+
