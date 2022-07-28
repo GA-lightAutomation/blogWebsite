@@ -14,10 +14,11 @@ const HeroContainer = styled('div')(({theme}) => ({
 export default function Home(){
     return(
         <Container maxWidth={"xl"} sx={{
-            background: 'transparent'
+            background: 'transparent',
+            paddingTop: '12px'
         }}>
             <Grid container spacing={2}>
-                <Grid item xs={12} sm={8} md={6}>
+                <Grid item xs={12} sm={8} >
                     <HeroContainer>
                         <Typography variant={"h4"}
                                     gutterBottom
@@ -30,7 +31,27 @@ export default function Home(){
                             Light Automation
                         </Typography>
 
-                        <img src={"/images/img.png"} alt={"ga logo"} width={"60%"} height={"auto"} />
+                        <Button
+                            variant={"outlined"}
+                            size={"large"}
+                            sx={{width: "60%", marginTop: "12px" }}
+                        >
+                            Go To Project
+                        </Button>
+                    </HeroContainer>
+                </Grid>
+                <Grid item xs={12} sm={8}>
+                    <HeroContainer>
+                        <Typography variant={"h4"}
+                                    gutterBottom
+                        >
+                            Gearbox Academy
+                        </Typography>
+                        <Typography variant={"h4"}
+                                    gutterBottom
+                        >
+                            Light Automation
+                        </Typography>
 
                         <Button
                             variant={"outlined"}

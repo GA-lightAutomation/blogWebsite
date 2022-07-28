@@ -9,6 +9,7 @@ import Docs from "./components/Pages/Docs";
 import Navbar from "./components/Navbar/Navbar";
 import {ThemeProvider} from "@mui/material";
 import {appTheme}  from "./Theme/theme";
+import Blogs from "./components/Pages/Blogs";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path={"/"} element={<Home />} />
           <Route path={"/docs"} element={<Docs />} />
+          <Route path={"/blogs"} element={<Blogs />} />
         </Routes>
       </BrowserRouter>
       </ThemeProvider>
@@ -28,3 +30,4 @@ function App() {
 }
 
 export default App;
+

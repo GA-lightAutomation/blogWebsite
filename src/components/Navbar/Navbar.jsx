@@ -31,7 +31,7 @@ const pages = [
     },
     {
         name: "Blogs",
-        path: "/blog",
+        path: "/blogs",
         variant: "text"
     },
     {
