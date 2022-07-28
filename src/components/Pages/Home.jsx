@@ -8,7 +8,8 @@ const HeroContainer = styled('div')(({theme}) => ({
     marginLeft: theme.spacing(2),
     justifyContent: 'start',
     textAlign: 'start',
-    color: "white"
+    color: "white",
+    width: "70%"
 }))
 
 export default function Home(){
@@ -23,12 +24,10 @@ export default function Home(){
                         <Typography variant={"h4"}
                                     gutterBottom
                         >
-                            Gearbox Academy
-                        </Typography>
-                        <Typography variant={"h4"}
-                                    gutterBottom
-                        >
                             Light Automation
+                        </Typography>
+                        <Typography variant={"body2"} color={"text.secondary"}>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur cum dolores dolorum facere fugiat incidunt ipsa iste laboriosam, molestiae odio praesentium quibusdam recusandae ut! Culpa dolorum earum fugiat saepe ullam.
                         </Typography>
 
                         <Button
@@ -45,14 +44,12 @@ export default function Home(){
                         <Typography variant={"h4"}
                                     gutterBottom
                         >
-                            Gearbox Academy
-                        </Typography>
-                        <Typography variant={"h4"}
-                                    gutterBottom
-                        >
-                            Light Automation
+                            Door Automation
                         </Typography>
 
+                        <Typography variant={"body2"} color={"text.secondary"}>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur cum dolores dolorum facere fugiat incidunt ipsa iste laboriosam, molestiae odio praesentium quibusdam recusandae ut! Culpa dolorum earum fugiat saepe ullam.
+                        </Typography>
                         <Button
                             variant={"outlined"}
                             size={"large"}
