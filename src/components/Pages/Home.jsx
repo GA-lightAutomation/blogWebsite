@@ -1,6 +1,7 @@
 import React from 'react';
 import {Button, Container, Grid, Typography} from "@mui/material";
 import {styled} from '@mui/material/styles';
+import {useNavigate} from 'react-router-dom';
 
 const HeroContainer = styled('div')(({theme}) => ({
     padding: '12px',
@@ -13,6 +14,8 @@ const HeroContainer = styled('div')(({theme}) => ({
 }))
 
 export default function Home(){
+    const navigate = useNavigate();
+
     return(
         <Container maxWidth={"xl"} sx={{
             background: 'transparent',
@@ -34,6 +37,7 @@ export default function Home(){
                             variant={"outlined"}
                             size={"large"}
                             sx={{width: "60%", marginTop: "12px" }}
+                            onClick={() => navigate('/light')}
                         >
                             Go To Project
                         </Button>

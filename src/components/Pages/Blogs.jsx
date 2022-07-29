@@ -32,7 +32,7 @@ export default function Blogs(){
         <Container maxWidth={"xl"} component={Paper} sx={theme => ({
             background: theme.palette.background
         })}>
-            <Typography variant={"h2"}
+            <Typography variant={"h4"}
                         align={"center"}
                         gutterBottom
             >
