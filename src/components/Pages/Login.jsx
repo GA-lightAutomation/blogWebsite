@@ -11,11 +11,7 @@ import Box from '@mui/material/Box'
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined'
 import Typography from "@mui/material/Typography" 
 import Container from "@mui/material/Container" 
-import { createTheme, ThemeProvider } from "@mui/material/styles" 
 import { Paper } from "@mui/material"
-
-
-const theme = createTheme() 
 
 export default function Login() {
     const handleSubmit = (event) => {
@@ -30,13 +26,16 @@ export default function Login() {
     return (
         <Container component={Paper} maxWidth='xs'  sx={theme => ({
             background: theme.palette.background, 
-            padding: '12px', 
-            marginBottom: '12px'
+            padding: '12px',
+            marginBottom: '12px', 
+            marginTop: '3rem', 
+            marginLeft: { xs:'auto', sm: 'auto'}, 
+            marginRight: { xs:'auto', sm:'auto'}
         })}>
         <CssBaseline /> 
         <Box 
         sx={{
-            marginTop: 8, 
+            marginTop: 3, 
             display: 'flex', 
             flexDirection: 'column', 
             alignItems: 'center', 
@@ -87,15 +86,10 @@ export default function Login() {
                 </Button>
                 <Grid container>
                     <Grid item xs>
-                    <Link href="#" variant="body2">
-                        Forgot password
-                    </Link>
-                    </Grid> 
-                    <Grid item>
                         <Link href="#" variant="body2">
-                            {"Don't have a password? Sigin up"}
+                            Forgot password
                         </Link>
-                    </Grid>
+                    </Grid> 
                 </Grid>
             </Box>
         
