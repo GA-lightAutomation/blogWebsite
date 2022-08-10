@@ -11,7 +11,7 @@ import {
     ListItemText,
     ListItem,
     ListItemButton,
-    List, Divider
+    List, Divider,
 } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -52,8 +52,11 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 }));
 
 export default function Navbar(){
+
     const [openDrawer, setOpenDrawer] = useState(false);
     let navigate = useNavigate();
+
+
     return (
         <AppBar position={"sticky"} sx={{
             background: "#062543"
@@ -143,6 +146,8 @@ export default function Navbar(){
                             </div>
                         ))}
                     </List>
+                    
+                  
                 </Box>
             </Drawer>
         </AppBar>
