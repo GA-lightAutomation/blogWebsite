@@ -15,12 +15,7 @@ export default function Light() {
     const [on, setOn] = useState(false);
 
     return (
-        <Container maxWidth={"xl"} sx={theme => ({
-            background: theme.palette.background,
-            width: "100%",
-            minHeight: "100vh"
-        })} component={Paper}
-        >
+        <div>
             <div style={{
                 paddingTop: "12px"
             }}>
@@ -54,6 +49,6 @@ export default function Light() {
                 >Off</Button>
             </ButtonGroup>
             </div>
-        </Container>
+        </div>
     )
 }
