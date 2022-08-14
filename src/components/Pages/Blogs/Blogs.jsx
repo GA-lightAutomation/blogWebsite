@@ -2,9 +2,13 @@ import React from 'react';
 import {
     Container,
     Paper,
-    Typography
+    Typography,
+    Fab
 } from "@mui/material";
-import BlogCard from'../BlogCard/BlogCard';
+import BlogCard from '../../BlogCard/BlogCard';
+import AddIcon from "@mui/icons-material/Add";
+import {useNavigate, useLocation} from "react-router-dom";
+
 
 const blogs = [
     {
@@ -28,12 +32,14 @@ const blogs = [
 ]
 
 export default function Blogs(){
+    const navigate = useNavigate();
+    const location = useLocation();
+
     return (
-        <Container maxWidth={"xl"} component={Paper} sx={theme => ({
-            background: theme.palette.background
-        })}>
+        <Container maxWidth={"xl"}>
             <Typography variant={"h4"}
                         align={"center"}
+                        color={"text.primary"}
                         gutterBottom
             >
                 Blogs
@@ -43,6 +49,23 @@ export default function Blogs(){
                     <BlogCard title={blog.title} body={blog.body} author={blog.author} date={blog.date} />
                 ))
             }
+            <Fab
+                variant={"extended"}
+                color={"primary"} aria-label={"add"}
+                sx={{
+                    position: "sticky",
+                    bottom: "10%",
+                    float: "right",
+                    color: "white",
+                    margin: "12px"
+                }}
+                onClick={() => navigate(`${location.pathname}/new`)}
+            >
+                <AddIcon sx={{ mr: {xs: 0, md: 1} }}/>
+                <Typography sx={{display: {xs: "none", md: "block"}}}>
+                    New Blog
+                </Typography>
+            </Fab>
         </Container>
     )
 }
